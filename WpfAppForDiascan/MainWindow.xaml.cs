@@ -9,6 +9,16 @@ namespace WpfAppForDiascan
 {
     public partial class MainWindow : Window
     {
+        //ВАЖНО!!!!!
+        //СКРИПТ СОЗДАНИЯ ТАБЛИЦЫ ДЛЯ ХРАНЕНИЯ ХЕШ-СУММ
+        /*
+            CREATE TABLE file_hashes (
+            id SERIAL PRIMARY KEY,
+            file_path TEXT NOT NULL,
+            hash TEXT NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+         */
+        //ЗДЕСЬ УКАЖИТЕ СВОЮ СТРОКУ ПОДКЛЮЧЕНИЯ К БАЗЕ ДАННЫХ PostgreSQL
         private readonly string _connectionString = "Host=localhost;Username=postgres;Password=9642;Database=hashdb";
 
         public MainWindow()
