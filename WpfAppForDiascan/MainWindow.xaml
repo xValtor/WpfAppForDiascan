@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfAppForDiascan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hash Calculator" Height="200" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Name="BtnSelectFiles" Content="Выбрать файлы" Width="120" Height="30" Click="Select_File"/>
+
+        <TextBox Name="TxtLog" Grid.Row="1" Margin="0,10,0,0" Height="100" VerticalScrollBarVisibility="Auto" 
+                 IsReadOnly="True" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
